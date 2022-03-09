@@ -10,6 +10,7 @@ namespace PeopleAndBooks.BLL.Model
     {
         public int Id { get; set; }
         public int ReaderId { get; set; }
+        public int BookId { get; set; }
         public DateTime DateTimeOffset { get; set; }
     }
 }

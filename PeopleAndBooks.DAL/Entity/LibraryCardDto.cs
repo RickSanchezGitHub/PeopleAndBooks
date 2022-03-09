@@ -13,6 +13,7 @@ namespace PeopleAndBooks.DAL.Entity
     {
         public int Id { get; set; }
         public int ReaderId { get; set; }
+        public int BookId { get; set; }
         public string DateTimeOffset { get; set; }
         public bool IsDeleted { get; set; }
     }
