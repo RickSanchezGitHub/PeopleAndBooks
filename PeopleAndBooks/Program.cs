@@ -3,6 +3,7 @@ using PeopleAndBooks.BLL.Service;
 using PeopleAndBooks.BLL.Service.Interface;
 using PeopleAndBooks.DAL.Repository.Interface;
 using PeopleAndBooks.DAL.Reposotory;
+using PeopleAndBooks.DAL.Reposotory.Interface;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +19,9 @@ builder.Services.AddScoped<IHumanReposotory, HumanReposotory>();
 
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<IBookService, BookService>();
+
+builder.Services.AddScoped<ILibraryCardRepository, LibraryCardRepository>();
+builder.Services.AddScoped<ILibraryCardService, LibraryCardService>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 

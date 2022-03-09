@@ -10,7 +10,7 @@ namespace PeopleAndBooks.DAL
     /// <summary>
     /// 1.2.3 - статичный класс с книгами
     /// </summary>
-    public static class BookDAL
+    public static class BookList
     {
         public static List<BookDto> books = new List<BookDto>()
         {

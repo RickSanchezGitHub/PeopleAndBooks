@@ -18,6 +18,7 @@ namespace PeopleAndBooks.BLL.config
         {
             CreateMap<HumanDto, Human>().ReverseMap();
             CreateMap<BookDto, Book>().ReverseMap();
+            CreateMap<LibraryCardDto, LibraryCard>().ReverseMap();
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PeopleAndBooks.DAL
 {
-    public static class HumanDAL
+    public static class HumanList
     {
         /// <summary>
         /// 1.2.3 - статичный класс с пользователями
@@ -22,7 +22,7 @@ namespace PeopleAndBooks.DAL
                 Surname = "Пипидастров",
                 Patronymic = "Артемович",
                 Birthday = new DateTime(2000-12-12),
-                Role = Core.Enum.Role.author
+                Role = Role.author
             },
             new HumanDto()
             {
@@ -31,7 +31,7 @@ namespace PeopleAndBooks.DAL
                 Surname = "Поттер",
                 Patronymic = "Артемович",
                 Birthday = new DateTime(1966-12-12),
-                Role = Core.Enum.Role.author
+                Role = Role.author
             },
             new HumanDto()
             {
@@ -40,7 +40,7 @@ namespace PeopleAndBooks.DAL
                 Surname = "Невредный",
                 Patronymic = "Михайлович",
                 Birthday = new DateTime(1966-06-06),
-                Role = Core.Enum.Role.author
+                Role = Role.author
             },
             new HumanDto()
             {
@@ -49,7 +49,7 @@ namespace PeopleAndBooks.DAL
                 Surname = "Невредный",
                 Patronymic = "Васильевич",
                 Birthday = new DateTime(1966-06-06),
-                Role = Core.Enum.Role.reader
+                Role = Role.reader
             },            
             new HumanDto()
             {
@@ -58,7 +58,7 @@ namespace PeopleAndBooks.DAL
                 Surname = "Невредный",
                 Patronymic = "Артемович",
                 Birthday = new DateTime(1966-06-06),
-                Role = Core.Enum.Role.reader
+                Role = Role.reader
             }
         };
     }

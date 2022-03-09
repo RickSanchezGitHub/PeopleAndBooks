@@ -12,27 +12,27 @@ namespace PeopleAndBooks.DAL.Reposotory
     {
         public List<BookDto> GetAll()
         {
-            var books = BookDAL.books.Where(b => !b.IsDeleted).ToList();
+            var books = BookList.books.Where(b => !b.IsDeleted).ToList();
             return books;
         }
 
         public List<BookDto> GetByAuthorId(int id)
         {
-            var books = BookDAL.books.Where(b => b.AuthorId == id).ToList();
+            var books = BookList.books.Where(b => b.AuthorId == id).ToList();
             return books;
         }
 
         public int Add(BookDto book)
         {
-            int lastId = BookDAL.books.Count() + 1;
+            int lastId = BookList.books.Count() + 1;
             book.Id = lastId;
-            BookDAL.books.Add(book);
+            BookList.books.Add(book);
             return lastId;
         }
 
         public void Delete(int id)
         {
-            var book = BookDAL.books.FirstOrDefault(b => b.Id == id);
+            var book = BookList.books.FirstOrDefault(b => b.Id == id);
             book.IsDeleted = true;
         }
     }

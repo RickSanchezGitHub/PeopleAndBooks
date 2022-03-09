@@ -14,6 +14,9 @@ namespace PeopleAndBooks.API.Config
 
             CreateMap<BookOutputModel, Book>().ReverseMap();
             CreateMap<BookInsertInputModel, Book>().ReverseMap();
+
+            CreateMap<LibraryCardInputModel, LibraryCard>().ReverseMap();
+
         }
     }
 }
