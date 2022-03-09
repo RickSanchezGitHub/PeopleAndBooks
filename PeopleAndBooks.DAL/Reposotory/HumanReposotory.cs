@@ -12,30 +12,34 @@ namespace PeopleAndBooks.DAL.Reposotory
     {
         public List<HumanDto> GetAll()
         {
-            var humans = HumanDAL.peoples.Where(h => !h.IsDelete).ToList();
+            var humans = HumanDAL.humans.Where(h => !h.IsDelete).ToList();
             return humans;
         }
 
         public List<HumanDto> GetAllAuthor()
         {
-            var humans = HumanDAL.peoples.Where(h => h.Role == Enum.Role.autthor && !h.IsDelete).ToList();
+            var humans = HumanDAL.humans.Where(h => h.Role == Core.Enum.Role.author && !h.IsDelete).ToList();
             return humans;
         }
 
-        public void FindHuman()
+        public List<HumanDto> FindHumans(string text)
         {
-            // поиска людей по ключевому слову имени/фамилии/очеству
+            var humans = HumanDAL.humans.Where(h => h.Name.StartsWith(text) || h.Name.EndsWith(text) 
+                                            || h.Surname.StartsWith(text) || h.Surname.EndsWith(text) ||
+                                            h.Patronymic.StartsWith(text) || h.Patronymic.EndsWith(text)).ToList();
+            return humans;
         }
+
         public int Add(HumanDto newHuman)
         {
-            var lastId = HumanDAL.peoples.Count();
+            var lastId = HumanDAL.humans.Count() + 1;
             newHuman.Id = lastId;
-            HumanDAL.peoples.Add(newHuman);
+            HumanDAL.humans.Add(newHuman);
             return lastId;
         }
         public void Delete(int id)
         {
-            var human = HumanDAL.peoples.FirstOrDefault(h => h.Id == id);
+            var human = HumanDAL.humans.FirstOrDefault(h => h.Id == id);
             human.IsDelete = true;
         }
     }

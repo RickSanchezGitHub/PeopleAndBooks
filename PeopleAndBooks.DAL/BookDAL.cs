@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace PeopleAndBooks.DAL
 {
     /// <summary>
-    /// 1.2.3
+    /// 1.2.3 - статичный класс с книгами
     /// </summary>
     public static class BookDAL
     {

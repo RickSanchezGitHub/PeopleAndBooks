@@ -6,7 +6,7 @@ namespace PeopleAndBooks.BLL.Service.Interface
     {
         int Add(Human human);
         void Delete(int id);
-        void FindHuman();
+        List<Human> FindHumans(string text);
         List<Human> GetAll();
         List<Human> GetAllAuthor();
     }

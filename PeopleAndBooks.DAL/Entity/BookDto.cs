@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace PeopleAndBooks.DAL.Model
 { 
     /// <summary>
-    /// 1.2.2
+    /// 1.2.2 - класс книги
     /// </summary>
     public class BookDto
     {

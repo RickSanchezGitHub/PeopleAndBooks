@@ -8,7 +8,7 @@ using PeopleAndBooks.BLL.Service.Interface;
 namespace PeopleAndBooks.API.Controllers
 {
     /// <summary>
-    /// 1.4
+    /// 1.4 - контроллер для книги
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
@@ -24,7 +24,7 @@ namespace PeopleAndBooks.API.Controllers
         }
 
         /// <summary>
-        /// 1.4.1.1
+        /// 1.4.1.1 метод возвращающий все книги
         /// </summary>
         [HttpGet]
         public ActionResult<List<BookOutputModel>> GetAll()
@@ -34,7 +34,7 @@ namespace PeopleAndBooks.API.Controllers
         }
 
         /// <summary>
-        /// 1.4.1.2
+        /// 1.4.1.2 метод возвращающий все книги по id автора
         /// </summary>
         [HttpGet("{id}")]
         public ActionResult<List<BookOutputModel>> GetByAuthorid([FromRoute] int id)
@@ -44,7 +44,7 @@ namespace PeopleAndBooks.API.Controllers
         }
 
         /// <summary>
-        /// 1.4.2
+        /// 1.4.2 метод добавляющий новую книгу
         /// </summary>
         [HttpPost]
         public ActionResult Add([FromBody] BookInsertInputModel book)
@@ -54,7 +54,7 @@ namespace PeopleAndBooks.API.Controllers
         }
 
         /// <summary>
-        /// 1.4.3
+        /// 1.4.3 метод удаляющий книгу
         /// </summary>
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)

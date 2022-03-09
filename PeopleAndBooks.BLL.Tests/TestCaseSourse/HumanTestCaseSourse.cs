@@ -1,4 +1,5 @@
 ﻿using PeopleAndBooks.BLL.Model;
+using PeopleAndBooks.DAL.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,35 +10,46 @@ namespace PeopleAndBooks.BLL.Tests.TestCaseSourse
 {
     public class HumanTestCaseSourse
     {
-        public List<Human> GetHumans()
+        public List<HumanDto> GetHumans()
         {
            var humans = 
-            new List<Human>()
+            new List<HumanDto>()
             {
-                new Human()
+                new HumanDto()
                 {
                     Id = 1,
                     Name = "Иннокентий",
                     Surname = "Пипидастров",
                     Patronymic = "Артемович",
-                    Birthday = new DateTime(2000-12-12)
+                    Role = Core.Enum.Role.author,
+                    Birthday = new DateTime(2000-12-12),
                 },
-                new Human()
+                new HumanDto()
                 {
                     Id = 2,
                     Name = "Гарри",
                     Surname = "Поттер",
                     Patronymic = "Артемович",
-                    Birthday = new DateTime(1966-12-12)
+                    Role = Core.Enum.Role.author,
+                    Birthday = new DateTime(1966-12-12),
                 },
-                new Human()
+                new HumanDto()
                 {
                     Id = 3,
                     Name = "Александр",
                     Surname = "Невредный",
                     Patronymic = "Артемович",
-                    Birthday = new DateTime(1966-06-06)
-
+                    Role = Core.Enum.Role.author,
+                    Birthday = new DateTime(1966-06-06),
+                }, 
+                new HumanDto()
+                {
+                    Id = 4,
+                    Name = "Читатель",
+                    Surname = "Вредный",
+                    Patronymic = "ТожеАртемович",
+                    Role = Core.Enum.Role.reader,
+                    Birthday = new DateTime(1966-06-06),
                 }
             };
             return humans;

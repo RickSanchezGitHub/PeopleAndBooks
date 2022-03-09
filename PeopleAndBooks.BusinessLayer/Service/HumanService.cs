@@ -51,9 +51,10 @@ namespace PeopleAndBooks.BLL.Service
             _repository.Delete(id);
         }
 
-        public void FindHuman()
+        public List<Human> FindHumans(string text)
         {
-            // поиска людей по ключевому слову имени/фамилии/очеству
+            var humans = _repository.FindHumans(text);
+            return _mapper.Map<List<Human>>(humans);
         }
 
     }

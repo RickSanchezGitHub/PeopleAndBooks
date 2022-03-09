@@ -6,7 +6,7 @@ namespace PeopleAndBooks.DAL.Interface
     {
         int Add(HumanDto newHuman);
         void Delete(int id);
-        void FindHuman();
+        List<HumanDto> FindHumans(string text);
         List<HumanDto> GetAll();
         List<HumanDto> GetAllAuthor();
     }

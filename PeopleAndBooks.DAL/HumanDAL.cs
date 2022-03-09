@@ -1,4 +1,5 @@
-﻿using PeopleAndBooks.DAL.Model;
+﻿using Core.Enum;
+using PeopleAndBooks.DAL.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +11,9 @@ namespace PeopleAndBooks.DAL
     public static class HumanDAL
     {
         /// <summary>
-        /// 1.2.3
+        /// 1.2.3 - статичный класс с пользователями
         /// </summary>
-        public static List<HumanDto> peoples = new List<HumanDto>()
+        public static List<HumanDto> humans = new List<HumanDto>()
         {
             new HumanDto()
             {
@@ -21,7 +22,7 @@ namespace PeopleAndBooks.DAL
                 Surname = "Пипидастров",
                 Patronymic = "Артемович",
                 Birthday = new DateTime(2000-12-12),
-                Role = Enum.Role.autthor
+                Role = Core.Enum.Role.author
             },
             new HumanDto()
             {
@@ -30,25 +31,25 @@ namespace PeopleAndBooks.DAL
                 Surname = "Поттер",
                 Patronymic = "Артемович",
                 Birthday = new DateTime(1966-12-12),
-                Role = Enum.Role.autthor
+                Role = Core.Enum.Role.author
             },
             new HumanDto()
             {
                 Id = 3,
                 Name = "Александр",
                 Surname = "Невредный",
-                Patronymic = "Артемович",
+                Patronymic = "Михайлович",
                 Birthday = new DateTime(1966-06-06),
-                Role = Enum.Role.autthor
+                Role = Core.Enum.Role.author
             },
             new HumanDto()
             {
                 Id = 4,
                 Name = "Александр",
                 Surname = "Невредный",
-                Patronymic = "Артемович",
+                Patronymic = "Васильевич",
                 Birthday = new DateTime(1966-06-06),
-                Role = Enum.Role.reader
+                Role = Core.Enum.Role.reader
             },            
             new HumanDto()
             {
@@ -57,7 +58,7 @@ namespace PeopleAndBooks.DAL
                 Surname = "Невредный",
                 Patronymic = "Артемович",
                 Birthday = new DateTime(1966-06-06),
-                Role = Enum.Role.reader
+                Role = Core.Enum.Role.reader
             }
         };
     }

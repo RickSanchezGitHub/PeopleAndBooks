@@ -24,7 +24,7 @@ namespace PeopleAndBooks.DAL.Reposotory
 
         public int Add(BookDto book)
         {
-            int lastId = BookDAL.books.Count();
+            int lastId = BookDAL.books.Count() + 1;
             book.Id = lastId;
             BookDAL.books.Add(book);
             return lastId;

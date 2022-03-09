@@ -1,4 +1,5 @@
-﻿using PeopleAndBooks.DAL.Enum;
+﻿using Core;
+using Core.Enum;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 namespace PeopleAndBooks.DAL.Model
 {
     /// <summary>
-    /// 1.2.1
+    /// 1.2.1 - класс пользователя
     /// </summary>
     public class HumanDto
     {
