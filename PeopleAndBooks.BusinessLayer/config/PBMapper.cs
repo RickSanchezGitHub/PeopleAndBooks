@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using PeopleAndBooks.BLL.Model;
-using PeopleAndBooks.DAL.Model;
+using PeopleAndBooks.DAL.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;

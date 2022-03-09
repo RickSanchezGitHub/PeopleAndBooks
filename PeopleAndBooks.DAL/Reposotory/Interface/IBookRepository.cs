@@ -1,6 +1,6 @@
-﻿using PeopleAndBooks.DAL.Model;
+﻿using PeopleAndBooks.DAL.Entity;
 
-namespace PeopleAndBooks.DAL.Interface
+namespace PeopleAndBooks.DAL.Repository.Interface
 {
     public interface IBookRepository
     {

@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using PeopleAndBooks.BLL.Model;
 using PeopleAndBooks.BLL.Service.Interface;
-using PeopleAndBooks.DAL.Interface;
-using PeopleAndBooks.DAL.Model;
+using PeopleAndBooks.DAL.Repository.Interface;
+using PeopleAndBooks.DAL.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;

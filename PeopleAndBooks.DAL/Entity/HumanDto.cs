@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PeopleAndBooks.DAL.Model
+namespace PeopleAndBooks.DAL.Entity
 {
     /// <summary>
     /// 1.2.1 - класс пользователя

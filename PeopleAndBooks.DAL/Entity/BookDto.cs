@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PeopleAndBooks.DAL.Model
+namespace PeopleAndBooks.DAL.Entity
 { 
     /// <summary>
     /// 1.2.2 - класс книги

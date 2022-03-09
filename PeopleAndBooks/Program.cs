@@ -1,7 +1,7 @@
 using AutoMapper;
 using PeopleAndBooks.BLL.Service;
 using PeopleAndBooks.BLL.Service.Interface;
-using PeopleAndBooks.DAL.Interface;
+using PeopleAndBooks.DAL.Repository.Interface;
 using PeopleAndBooks.DAL.Reposotory;
 
 var builder = WebApplication.CreateBuilder(args);

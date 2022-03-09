@@ -1,14 +1,14 @@
 ﻿using AutoMapper;
 using PeopleAndBooks.BLL.config;
 using PeopleAndBooks.BLL.Model;
-using PeopleAndBooks.DAL.Interface;
+using PeopleAndBooks.DAL.Repository.Interface;
 using PeopleAndBooks.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PeopleAndBooks.DAL.Model;
+using PeopleAndBooks.DAL.Entity;
 using PeopleAndBooks.BLL.Service.Interface;
 
 namespace PeopleAndBooks.BLL.Service
