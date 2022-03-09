@@ -1,11 +1,13 @@
 ﻿using PeopleAndBooks.DAL.Repository.Interface;
 using PeopleAndBooks.DAL.Entity;
 using System;
+using Core;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Core.Enum;
 using System.Threading.Tasks;
+using PeopleAndBooks.Core.Const;
 
 namespace PeopleAndBooks.DAL.Reposotory
 {
@@ -33,7 +35,7 @@ namespace PeopleAndBooks.DAL.Reposotory
 
         public int Add(HumanDto newHuman)
         {
-            var lastId = HumanList.humans.Count() + 1;
+            var lastId = HumanList.humans.Count() + ConstRepository.OneIdForAdd;
             newHuman.Id = lastId;
             HumanList.humans.Add(newHuman);
             return lastId;

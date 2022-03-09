@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PeopleAndBooks.Core.Const;
 
 namespace PeopleAndBooks.DAL.Reposotory
 {
@@ -24,7 +25,7 @@ namespace PeopleAndBooks.DAL.Reposotory
 
         public int Add(BookDto book)
         {
-            int lastId = BookList.books.Count() + 1;
+            int lastId = BookList.books.Count() + ConstRepository.OneIdForAdd;
             book.Id = lastId;
             BookList.books.Add(book);
             return lastId;

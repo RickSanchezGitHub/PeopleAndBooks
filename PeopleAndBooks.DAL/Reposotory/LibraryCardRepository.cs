@@ -1,4 +1,5 @@
-﻿using PeopleAndBooks.DAL.Entity;
+﻿using PeopleAndBooks.Core.Const;
+using PeopleAndBooks.DAL.Entity;
 using PeopleAndBooks.DAL.Lists;
 using PeopleAndBooks.DAL.Reposotory.Interface;
 using System;
@@ -13,7 +14,7 @@ namespace PeopleAndBooks.DAL.Reposotory
     {
         public int Add(LibraryCardDto newLibraryCard)
         {
-            var lastId = LibraryCardList.LibraryCards.Count() + 1;
+            var lastId = LibraryCardList.LibraryCards.Count() + ConstRepository.OneIdForAdd;
             newLibraryCard.Id = lastId;
             LibraryCardList.LibraryCards.Add(newLibraryCard);
             return lastId;
